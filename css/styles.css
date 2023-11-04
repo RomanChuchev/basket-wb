@@ -1,0 +1,37 @@
+@import url('./config/reset.css');
+@import url('./config/header.css');
+@import url('./config/main.css');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	min-width: 320px;
+	background: #6725a8;
+}
+
+.wrapper {
+	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	min-height: 100%;
+	overflow: hidden;
+}
+
+.container {
+	max-width: 1400px;
+	padding-left: 24px;
+	padding-right: 24px;
+}
