@@ -1,3 +1,156 @@
 main {
 	flex: 1 1 auto;
 }
+
+.basket {
+	background: #f6f6fa;
+	border-radius: 24px;
+	padding: 22px 24px 50px;
+	display: flex;
+	gap: 32px;
+	width: 100%;
+}
+
+.basket__container {
+	flex: 1 1 auto;
+	padding-top: 14px;
+}
+
+.h1 {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 28px;
+	line-height: 36px; /* 128.571% */
+	letter-spacing: -0.28px;
+}
+
+.h2 {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 32px; /* 133.333% */
+	letter-spacing: -0.24px;
+}
+
+.h3 {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 28px;
+	letter-spacing: -0.2px;
+}
+
+.h4 {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 24px; /* 150% */
+}
+
+.p13 {
+	font-size: 13px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 16px; /* 123.077% */
+}
+
+.p14 {
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 20px; /* 142.857% */
+}
+
+.p16 {
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 24px; /* 150% */
+}
+
+.row-between {
+	display: flex;
+	justify-content: space-between;
+}
+
+.total {
+	flex: 1 1 auto;
+	background: #fff;
+	border-radius: 16px;
+	box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.3),
+		0px 2px 10px 0px rgba(0, 0, 0, 0.15);
+	padding: 16px 24px 24px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 28px;
+
+	width: 25.5%;
+}
+
+.total__head {
+	width: 100%;
+}
+
+.total__content {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.total__title {
+	margin-bottom: 12px;
+}
+
+.total__box {
+	border-radius: 8px;
+	background: #f6f6fa;
+
+	display: flex;
+	padding: 8px 8px 12px 8px;
+	align-items: center;
+	gap: 8px;
+	align-self: stretch;
+}
+
+.total__price {
+	margin-top: 9px;
+	margin-bottom: -3px;
+}
+
+.total__price svg {
+	min-width: 22px;
+}
+
+.colored-magenta {
+	line-height: 16px;
+	color: #cb11ab;
+	width: max-content;
+
+	border-bottom: 1px dashed rgba(203, 17, 171, 0.2);
+}
+
+.colored-green {
+	line-height: 16px;
+	color: #0cb477;
+	width: max-content;
+
+	border-bottom: 1px dashed rgba(12, 180, 119, 0.2);
+}
+
+.total__item {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	width: 100%;
+}
+
+.total__card {
+	display: flex;
+	gap: 8px;
+}
+
+.total__checkbox {
+	flex-direction: column;
+	align-items: start;
+}
