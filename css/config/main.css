@@ -11,9 +11,13 @@ main {
 	width: 100%;
 }
 
-.basket__container {
-	flex: 1 1 auto;
+.basket__wrapper-left {
+	flex: 7;
 	padding-top: 14px;
+}
+
+.basket__wrapper-right {
+	flex: 3;
 }
 
 .h1 {
@@ -68,28 +72,33 @@ main {
 	line-height: 24px; /* 150% */
 }
 
+.icon {
+	cursor: pointer;
+	padding: 5px;
+	margin: -5px;
+}
+
 .row-between {
 	display: flex;
 	justify-content: space-between;
 }
 
 .total {
-	flex: 1 1 auto;
 	background: #fff;
 	border-radius: 16px;
 	box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.3),
 		0px 2px 10px 0px rgba(0, 0, 0, 0.15);
-	padding: 16px 24px 24px;
+	padding: 17px 24px 24px;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	gap: 28px;
-
-	width: 25.5%;
+	gap: 26px;
+	height: max-content;
 }
 
-.total__head {
-	width: 100%;
+.total__item {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
 }
 
 .total__content {
@@ -103,19 +112,17 @@ main {
 }
 
 .total__box {
-	border-radius: 8px;
-	background: #f6f6fa;
-
 	display: flex;
-	padding: 8px 8px 12px 8px;
 	align-items: center;
 	gap: 8px;
-	align-self: stretch;
+
+	border-radius: 8px;
+	background: #f6f6fa;
+	padding: 8px 8px 12px 8px;
 }
 
 .total__price {
 	margin-top: 9px;
-	margin-bottom: -3px;
 }
 
 .total__price svg {
@@ -138,19 +145,80 @@ main {
 	border-bottom: 1px dashed rgba(12, 180, 119, 0.2);
 }
 
-.total__item {
-	display: flex;
-	flex-direction: column;
-	gap: 4px;
-	width: 100%;
-}
-
 .total__card {
 	display: flex;
-	gap: 8px;
+	align-items: center;
+	gap: 9px;
 }
 
-.total__checkbox {
+.checkbox {
 	flex-direction: column;
 	align-items: start;
+	margin-top: 7px;
+}
+
+.checkbox__label {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+}
+
+.checkbox__real {
+	width: 0;
+	height: 0;
+	opacity: 0;
+	z-index: -1;
+}
+
+.checkbox__custom {
+	display: inline-block;
+	width: 22px;
+	height: 22px;
+	border: 1px solid #c5c5c8;
+	border-radius: 5px;
+	cursor: pointer;
+	position: relative;
+	transition: border 0.2s ease-in;
+	margin-right: 9px;
+}
+
+.checkbox__custom::before {
+	content: '';
+	display: inline-block;
+	width: 15px;
+	height: 12px;
+	background: url(../../assets/icons/check-violet.svg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	transition: transform 0.2s ease-in;
+}
+
+.checkbox__real:checked + .checkbox__custom::before {
+	transform: translate(-50%, -50%) scale(1);
+}
+
+.checkbox__real:hover + .checkbox__custom,
+.checkbox__real:focus + .checkbox__custom {
+	border: 1px solid #6725a8;
+}
+
+.rules-confirm {
+	margin-top: 6px;
+	display: flex;
+	align-items: flex-start;
+	font-size: 13px;
+	line-height: 16px;
+}
+
+.rules-confirm img {
+	margin-right: 8px;
+}
+
+.rules {
+	border-bottom: 1px solid #c5c5c8;
+	cursor: pointer;
 }
