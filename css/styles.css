@@ -1,4 +1,5 @@
 @import url('./config/reset.css');
+@import url('./fonts/stylesheet.css');
 @import url('./config/header.css');
 @import url('./config/main.css');
 
@@ -14,6 +15,7 @@ body {
 	font-weight: 400;
 	min-width: 320px;
 	background: #6725a8;
+	font-family: 'Segoe Regular', sans-serif;
 }
 
 .wrapper {
@@ -46,10 +48,15 @@ body {
 	font-family: 'Segoe Bold', sans-serif;
 	background: #cb11ab;
 	border-radius: 8px;
-	color: #ffffff;
+	color: #fff;
 	cursor: pointer;
 	font-size: 16px;
 	font-style: normal;
 	font-weight: 700;
 	line-height: 24px;
+	transition: background 0.2s ease-in;
+
+	&:hover {
+		background: rgb(186, 12, 157);
+	}
 }
