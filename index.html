@@ -75,21 +75,68 @@
 			</header>
 
 			<main class="basket container">
-				<div class="basket__wrapper-left">
-					<section class="choose">
+				<div class="basket__left-wrapper">
+					<section class="choose p16">
 						<h1 class="h1">Корзина</h1>
-						<input type="checkbox" name="choose" id="!!!" />Выбрать все
-						<br />
 
-						<ul>
-							<li>Футболка UZcotton мужская</li>
-							<li>
-								Силиконовый чехол картхолдер (отверстия) для карт, прозрачный
-								кейс бампер на Apple iPhone XR, MobiSafe
-							</li>
-							<li>
-								Карандаши цветные Faber-Castell "Замок", набор 24 цвета,
-								заточенные, шестигранные,Faber-Castell
+						<div class="checkbox">
+							<label class="checkbox__label" for="checkbox-pay">
+								<input
+									type="checkbox"
+									name="select-all"
+									class="checkbox__real"
+									id="checkbox-pay"
+								/>
+								<span class="checkbox__custom"></span>
+								Выбрать все
+							</label>
+						</div>
+
+						<ul class="basket__list">
+							<li class="basket__item">
+								<div class="checkbox">
+									<label class="checkbox__label" for="checkbox-pay">
+										<input
+											type="checkbox"
+											name="select-all"
+											class="checkbox__real"
+											id="checkbox-pay"
+										/>
+										<span class="checkbox__custom"></span>
+									</label>
+								</div>
+								<img
+									class="basket__img"
+									src="./assets/images/t-shirt.png"
+									alt="t-shirt"
+								/>
+								<div class="basket__info">
+									<h4 class="h4">Футболка UZcotton мужская</h4>
+									<p class="basket__desc">
+										<span>Цвет: белый</span>
+										<span>Размер: 56</span>
+									</p>
+									<div class="basket__company">
+										<p>Коледино WB</p>
+
+										<div class="tooltip">
+											<p>OOO Вайлдберриз</p>
+											<img
+												class="tooltip__icon"
+												src="./assets/icons/info.svg"
+												alt="info"
+											/>
+											<div class="tooltip__container">
+												<div class="tooltip__title">OOO «МЕГАПРОФСТИЛЬ»</div>
+												<div class="tooltip__text">ОГРН: 5167746237148</div>
+												<div class="tooltip__text">
+													129337, Москва, улица Красная Сосна, 2, корпус 1, стр.
+													1, помещение 2, офис 34
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
 							</li>
 						</ul>
 					</section>
@@ -98,7 +145,7 @@
 					<section class="recipient"></section>
 				</div>
 
-				<aside class="basket__wrapper-right total">
+				<aside class="basket__right-wrapper total">
 					<div class="total__head">
 						<div class="row-between total__title">
 							<h2 class="h2">Итого</h2>

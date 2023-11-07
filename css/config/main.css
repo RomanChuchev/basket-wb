@@ -11,12 +11,12 @@ main {
 	width: 100%;
 }
 
-.basket__wrapper-left {
+.basket__left-wrapper {
 	flex: 7;
 	padding-top: 14px;
 }
 
-.basket__wrapper-right {
+.basket__right-wrapper {
 	flex: 3;
 }
 
@@ -178,7 +178,7 @@ main {
 	border-radius: 5px;
 	cursor: pointer;
 	position: relative;
-	transition: border 0.2s ease-in;
+	transition: border 0.2s ease-in, background 0.2s ease-in;
 	margin-right: 9px;
 }
 
@@ -187,7 +187,7 @@ main {
 	display: inline-block;
 	width: 15px;
 	height: 12px;
-	background: url(../../assets/icons/check-violet.svg);
+	background: url('../../assets/icons/check-white.svg');
 	background-size: contain;
 	background-repeat: no-repeat;
 	position: absolute;
@@ -197,13 +197,18 @@ main {
 	transition: transform 0.2s ease-in;
 }
 
+.checkbox__real:checked + .checkbox__custom {
+	background: #cb11ab;
+	border: 1px solid #cb11ab;
+}
+
 .checkbox__real:checked + .checkbox__custom::before {
 	transform: translate(-50%, -50%) scale(1);
 }
 
 .checkbox__real:hover + .checkbox__custom,
 .checkbox__real:focus + .checkbox__custom {
-	border: 1px solid #6725a8;
+	border: 1px solid #cb11ab;
 }
 
 .rules-confirm {
@@ -221,4 +226,72 @@ main {
 .rules {
 	border-bottom: 1px solid #c5c5c8;
 	cursor: pointer;
+}
+
+.basket__list {
+	display: flex;
+	flex-direction: column;
+}
+
+.basket__item {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+
+.basket__img {
+	background-size: contain;
+	width: 72px;
+	height: 96px;
+}
+
+.basket__info {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+.basket__desc {
+	display: flex;
+	gap: 16px;
+}
+
+.basket__company {
+	position: relative;
+}
+
+.tooltip {
+	display: flex;
+	gap: 6px;
+}
+.tooltip__title {
+}
+.tooltip__text {
+}
+
+.tooltip__icon {
+	cursor: pointer;
+}
+
+.tooltip__icon:hover + .tooltip__container {
+	visibility: visible;
+	opacity: 1;
+}
+
+.tooltip__container {
+	position: absolute;
+
+	background-color: #fff;
+	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15), 0px 0px 1px rgba(0, 0, 0, 0.3);
+	border-radius: 8px;
+	visibility: hidden;
+	opacity: 0;
+	padding: 11px 16px 13px;
+	transition: opacity 0.2s ease;
+
+	width: 280px;
+	left: 0;
+	color: black;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
 }
