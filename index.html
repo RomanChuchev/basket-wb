@@ -39,6 +39,7 @@
 							type="text"
 							name="name"
 							class="form-control _req"
+							autocomplete="off"
 							placeholder="Я ищу..."
 						/>
 					</div>
@@ -56,7 +57,7 @@
 					</div>
 				</div>
 
-				<nav class="container header__menu menu">
+				<nav class="header__menu menu">
 					<ul class="menu__list">
 						<li class="menu__item">
 							<a class="menu__link" href="#basket">Корзина</a>
@@ -71,6 +72,8 @@
 							<a class="menu__link" href="#recipient">Получатель</a>
 						</li>
 					</ul>
+					<div class="menu__blur"></div>
+					<button class="menu__close">Закрыть меню</button>
 				</nav>
 			</header>
 
@@ -79,37 +82,45 @@
 					<section class="choose p16">
 						<h1 class="h1">Корзина</h1>
 
-						<div class="checkbox">
-							<label class="checkbox__label" for="checkbox-pay">
-								<input
-									type="checkbox"
-									name="select-all"
-									class="checkbox__real"
-									id="checkbox-pay"
-								/>
-								<span class="checkbox__custom"></span>
-								Выбрать все
-							</label>
+						<div class="basket__items-selection">
+							<div class="checkbox">
+								<label class="checkbox__label" for="select-all">
+									<input
+										type="checkbox"
+										name="select-all"
+										class="checkbox__real"
+										id="select-all"
+									/>
+									<span class="checkbox__custom"></span>
+									Выбрать все
+								</label>
+							</div>
+							<img
+								class="toggle-arrow"
+								src="assets/icons/arrow.svg"
+								alt="arrow"
+							/>
 						</div>
 
 						<ul class="basket__list">
 							<li class="basket__item">
-								<div class="checkbox">
-									<label class="checkbox__label" for="checkbox-pay">
+								<div class="checkbox basket__checkbox">
+									<label class="checkbox__label" for="checkbox-1">
 										<input
 											type="checkbox"
 											name="select-all"
 											class="checkbox__real"
-											id="checkbox-pay"
+											id="checkbox-1"
 										/>
 										<span class="checkbox__custom"></span>
 									</label>
+									<img
+										class="basket__img"
+										src="./assets/images/t-shirt.png"
+										alt="t-shirt"
+									/>
 								</div>
-								<img
-									class="basket__img"
-									src="./assets/images/t-shirt.png"
-									alt="t-shirt"
-								/>
+
 								<div class="basket__info">
 									<h4 class="h4">Футболка UZcotton мужская</h4>
 									<p class="basket__desc">
@@ -127,9 +138,9 @@
 												alt="info"
 											/>
 											<div class="tooltip__container">
-												<div class="tooltip__title">OOO «МЕГАПРОФСТИЛЬ»</div>
-												<div class="tooltip__text">ОГРН: 5167746237148</div>
-												<div class="tooltip__text">
+												<h5 class="tooltip__title h5">OOO «МЕГАПРОФСТИЛЬ»</h5>
+												<div class="tooltip__text p13">ОГРН: 5167746237148</div>
+												<div class="tooltip__text p13">
 													129337, Москва, улица Красная Сосна, 2, корпус 1, стр.
 													1, помещение 2, офис 34
 												</div>

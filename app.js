@@ -6,9 +6,10 @@ document
 		document.querySelector('.header__menu').classList.toggle('open');
 	});
 
-document.querySelector('body').addEventListener('click', function (e) {
+document.querySelector('.header__menu').addEventListener('click', function (e) {
+	console.log(e.target.classList.value);
 	if (
-		e.target.classList.value !== 'header__burger header-burger open' &&
+		e.target.classList.value !== 'menu__list' &&
 		document.querySelector('.header__burger').classList.contains('open')
 	) {
 		document.querySelector('.header__burger').classList.remove('open');

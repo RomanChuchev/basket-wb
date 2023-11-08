@@ -21,9 +21,10 @@ main {
 }
 
 .h1 {
+	/* font-family: Segoe UI, sans-serif; */
+	font-size: 28px;
 	font-style: normal;
 	font-weight: 700;
-	font-size: 28px;
 	line-height: 36px; /* 128.571% */
 	letter-spacing: -0.28px;
 }
@@ -49,6 +50,13 @@ main {
 	font-weight: 700;
 	font-size: 16px;
 	line-height: 24px; /* 150% */
+}
+
+.h5 {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 13px;
+	line-height: 16px; /* 123.077% */
 }
 
 .p13 {
@@ -180,6 +188,7 @@ main {
 	position: relative;
 	transition: border 0.2s ease-in, background 0.2s ease-in;
 	margin-right: 9px;
+	z-index: 1;
 }
 
 .checkbox__custom::before {
@@ -228,6 +237,13 @@ main {
 	cursor: pointer;
 }
 
+.basket__items-selection {
+	display: flex;
+	justify-content: space-between;
+	padding: 19px 0 16px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 .basket__list {
 	display: flex;
 	flex-direction: column;
@@ -239,8 +255,16 @@ main {
 	gap: 16px;
 }
 
+.basket__checkbox {
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	gap: 3px;
+}
+
 .basket__img {
 	background-size: contain;
+	border-radius: 8px;
 	width: 72px;
 	height: 96px;
 }
@@ -270,6 +294,8 @@ main {
 
 .tooltip__icon {
 	cursor: pointer;
+	padding: 5px;
+	margin: -5px;
 }
 
 .tooltip__icon:hover + .tooltip__container {
@@ -279,7 +305,6 @@ main {
 
 .tooltip__container {
 	position: absolute;
-
 	background-color: #fff;
 	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15), 0px 0px 1px rgba(0, 0, 0, 0.3);
 	border-radius: 8px;
@@ -290,6 +315,7 @@ main {
 
 	width: 280px;
 	left: 0;
+	top: 50px;
 	color: black;
 	display: flex;
 	flex-direction: column;
