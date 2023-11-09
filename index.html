@@ -102,54 +102,7 @@
 							/>
 						</div>
 
-						<ul class="basket__list">
-							<li class="basket__item">
-								<div class="checkbox basket__checkbox">
-									<label class="checkbox__label" for="checkbox-1">
-										<input
-											type="checkbox"
-											name="select-all"
-											class="checkbox__real"
-											id="checkbox-1"
-										/>
-										<span class="checkbox__custom"></span>
-									</label>
-									<img
-										class="basket__img"
-										src="./assets/images/t-shirt.png"
-										alt="t-shirt"
-									/>
-								</div>
-
-								<div class="basket__info">
-									<h4 class="h4">Футболка UZcotton мужская</h4>
-									<p class="basket__desc">
-										<span>Цвет: белый</span>
-										<span>Размер: 56</span>
-									</p>
-									<div class="basket__company">
-										<p>Коледино WB</p>
-
-										<div class="tooltip">
-											<p>OOO Вайлдберриз</p>
-											<img
-												class="tooltip__icon"
-												src="./assets/icons/info.svg"
-												alt="info"
-											/>
-											<div class="tooltip__container">
-												<h5 class="tooltip__title h5">OOO «МЕГАПРОФСТИЛЬ»</h5>
-												<div class="tooltip__text p13">ОГРН: 5167746237148</div>
-												<div class="tooltip__text p13">
-													129337, Москва, улица Красная Сосна, 2, корпус 1, стр.
-													1, помещение 2, офис 34
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</li>
-						</ul>
+						<ul id="basket-list" class="basket__list"></ul>
 					</section>
 					<section class="delivery"></section>
 					<section class="payment"></section>
@@ -204,7 +157,7 @@
 							<p class="p13">1234 12•• •••• 1234</p>
 						</div>
 
-						<div class="total__box checkbox p13">
+						<div class="total__box total__checkbox checkbox p13">
 							<label class="checkbox__label" for="checkbox-pay">
 								<input
 									type="checkbox"
@@ -239,6 +192,6 @@
 			<footer class="footer">© 2022 ООО «Товары и точка»</footer>
 		</div>
 
-		<script src="./app.js"></script>
+		<script defer type="module" src="./app.js"></script>
 	</body>
 </html>
