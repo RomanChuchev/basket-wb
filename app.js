@@ -39,11 +39,26 @@ function createBasketItem(el) {
 	return item;
 }
 
-function addBasketItem() {
+(function addBasketItem() {
 	basketData.forEach((el) => basketList.append(createBasketItem(el)));
-}
+	toggleBasketList();
+})();
 
-addBasketItem();
+/* Close basket list */
+function toggleBasketList() {
+	const btn = document.querySelector('#toggle-basket-list');
+	const basketHeight = basketList.clientHeight;
+	btn.addEventListener('click', () => {
+		btn.classList.toggle('toggle-arrow_close');
+		basketList.classList.toggle('basket__list_close');
+
+		if (basketList.classList.contains('basket__list_close')) {
+			basketList.style.maxHeight = '0px';
+		} else {
+			basketList.style.maxHeight = `${basketHeight}px`;
+		}
+	});
+}
 
 function createBasketCheckbox(el) {
 	const checkbox = document.createElement('div');

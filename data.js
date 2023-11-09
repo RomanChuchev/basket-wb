@@ -50,7 +50,7 @@ export const basketData = [
 		sale: 48,
 		checked: true,
 		count: 2,
-		remains: 3,
+		remains: 4,
 		favourites: false,
 		ogrn: 5167746237148,
 		address:

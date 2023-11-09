@@ -247,22 +247,36 @@ main {
 .basket__items-selection {
 	display: flex;
 	justify-content: space-between;
-	padding: 26px 0 17px 1px;
+	padding: 26px 0 16px 1px;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 	text-align: center;
+}
+
+.basket__missing-selection {
+	font-weight: 600;
+	padding-bottom: 17px;
 }
 
 .basket__list {
 	display: flex;
 	flex-direction: column;
-	gap: 20px;
+	gap: 30.5px;
+	transition: all 0.2s ease-in;
+	position: relative;
+	transform-origin: top;
+	transform: scaleY(1);
+	padding-top: 12px;
+	padding-bottom: 7px;
+}
+
+.basket__list_close {
+	transform: scaleY(0);
 }
 
 .basket__item {
 	display: flex;
 	align-items: start;
 	gap: 16px;
-	padding-top: 11px;
 }
 
 .basket__checkbox {
@@ -494,4 +508,15 @@ main {
 	right: -10px;
 	left: auto;
 	padding: 11px 16px 13px 16px;
+}
+
+.toggle-arrow {
+	cursor: pointer;
+	padding: 5px;
+	margin: -5px;
+	transition: transform 0.3s ease-in;
+}
+
+.toggle-arrow_close {
+	transform: rotate(180deg);
 }
