@@ -61,3 +61,12 @@ body {
 .button:hover {
 	background: rgb(186, 12, 157);
 }
+
+.footer {
+	padding: 24px 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: rgba(255, 255, 255, 0.7);
+	font-size: 13px;
+}

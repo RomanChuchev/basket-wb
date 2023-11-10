@@ -79,7 +79,7 @@
 
 			<main class="basket container">
 				<div class="basket__left-wrapper">
-					<section class="choose p16">
+					<section id="basket" class="choose p16">
 						<h1 class="h1">Корзина</h1>
 
 						<div class="basket__items-selection">
@@ -116,9 +116,21 @@
 
 						<ul id="missing-list" class="basket__list"></ul>
 					</section>
-					<section class="delivery"></section>
-					<section class="payment"></section>
-					<section class="recipient"></section>
+					<section id="delivery" class="delivery">
+						<div class="info-wrapper">
+							<div class="info-wrapper__head">
+								<h2>Способ доставки</h2>
+								<a class="info-wrapper__link" href="#">Изменить</a>
+							</div>
+							<div class="info-wrapper__body"></div>
+						</div>
+					</section>
+					<section id="payment" class="payment">
+						<div class="info-wrapper"></div>
+					</section>
+					<section id="recipient" class="recipient">
+						<div class="info-wrapper"></div>
+					</section>
 				</div>
 
 				<aside class="basket__right-wrapper total">
