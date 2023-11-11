@@ -160,7 +160,7 @@ main {
 	border-bottom: 1px dashed rgba(12, 180, 119, 0.2);
 }
 
-.total__card {
+.card {
 	display: flex;
 	align-items: center;
 	gap: 9px;
@@ -536,6 +536,10 @@ main {
 	transform: rotate(180deg);
 }
 
+.choose {
+	margin-bottom: 20px;
+}
+
 .info-wrapper {
 	border-radius: 16px;
 	background: #fff;
@@ -544,5 +548,151 @@ main {
 	flex-direction: column;
 	align-items: flex-start;
 	gap: 16px;
-	align-self: stretch;
+}
+
+.info-wrapper__head {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.info-wrapper__link {
+	color: #cb11ab;
+	text-align: right;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 24px;
+	cursor: pointer;
+	padding-top: 5px;
+}
+
+.info-wrapper__body {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.info-wrapper__grid {
+	display: grid;
+	grid-template-columns: 153px auto;
+	column-gap: 32px;
+}
+
+.info-wrapper__title {
+	font-weight: 600;
+	line-height: 24px;
+	font-size: 16px;
+	letter-spacing: 0.01px;
+	white-space: nowrap;
+}
+
+.point__address {
+	line-height: 24px;
+}
+
+.point__info {
+	display: flex;
+	font-size: 13px;
+	margin-top: 4px;
+	line-height: 16px;
+}
+
+.point__rate {
+	margin-left: 4px;
+	margin-right: 8px;
+}
+
+.info-wrapper__cost {
+	line-height: 24px;
+}
+
+.info-wrapper__images {
+	display: flex;
+	gap: 8px;
+}
+
+.info-wrapper__img {
+	position: relative;
+}
+.info-wrapper__img img {
+	width: 40px;
+	height: 56px;
+	border-radius: 8px;
+}
+
+.info-wrapper__delivery {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	line-height: 16px;
+	margin-top: 6px;
+}
+
+.payment__method {
+	width: 100%;
+	display: flex;
+	gap: 8px 12px;
+	flex-wrap: wrap;
+	line-height: 24px;
+	align-items: center;
+}
+
+.payment__period {
+	line-height: 8px;
+}
+.payment__info {
+	flex-basis: 100%;
+	color: #9797af;
+}
+
+.recipient__content {
+	width: 100%;
+}
+.form {
+	max-width: 700px;
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+}
+
+.form__row {
+	display: flex;
+	gap: 24px;
+	height: 64px;
+}
+
+.form__container {
+	flex-grow: 1;
+}
+
+.form__title {
+	position: relative;
+	transform: translateY(25px);
+	color: #a0a0a4;
+}
+
+.form__label {
+	display: flex;
+	flex-direction: column-reverse;
+	border-bottom: 1px solid #a0a0a4;
+}
+
+.form__input {
+	height: 27px;
+}
+
+.form__input:focus ~ .form__title,
+.form__input:not(:placeholder-shown) ~ .form__title {
+	transform: translateY(0);
+	font-size: 13px;
+}
+
+.form__error {
+	color: #f55123;
+	font-size: 12px;
+}
+
+.inn {
+	font-size: 12px;
 }

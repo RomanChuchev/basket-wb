@@ -119,17 +119,160 @@
 					<section id="delivery" class="delivery">
 						<div class="info-wrapper">
 							<div class="info-wrapper__head">
-								<h2>Способ доставки</h2>
+								<h2 class="h2">Способ доставки</h2>
 								<a class="info-wrapper__link" href="#">Изменить</a>
 							</div>
-							<div class="info-wrapper__body"></div>
+							<div class="info-wrapper__body">
+								<div class="info-wrapper__grid">
+									<p class="info-wrapper__title">Пункт выдачи</p>
+									<div class="point">
+										<div class="point__address">
+											Бишкек, улица Ахматбека Суюмбаева, 12/1
+										</div>
+										<div class="point__info">
+											<img src="./assets/icons/star.svg" alt="star" />
+											<span class="point__rate">4.99</span>
+											<span class="point__time">Ежедневно с 10 до 21 </span>
+										</div>
+									</div>
+								</div>
+
+								<div class="info-wrapper__grid">
+									<p class="info-wrapper__title">Стоимость доставки</p>
+									<span class="info-wrapper__cost">Бесплатно</span>
+								</div>
+
+								<div class="info-wrapper__grid">
+									<p class="info-wrapper__title">5—6 февраля</p>
+									<div class="info-wrapper__images">
+										<div class="info-wrapper__img">
+											<img src="./assets/images/t-shirt.png" alt="t-shirt" />
+										</div>
+										<div class="info-wrapper__img">
+											<img src="./assets/images/case.png" alt="case" />
+										</div>
+										<div class="info-wrapper__img">
+											<img src="./assets/images/pencils.png" alt="pencils" />
+										</div>
+									</div>
+								</div>
+
+								<div class="info-wrapper__grid">
+									<p class="info-wrapper__title">7—8 февраля</p>
+									<div class="info-wrapper__images">
+										<div class="info-wrapper__img">
+											<img src="./assets/images/case.png" alt="case" />
+										</div>
+									</div>
+								</div>
+
+								<div class="info-wrapper__delivery">
+									<img src="assets/icons/shipping.svg" alt="shipping" />
+									<p class="delivery__info p13">
+										Обратная доставка товаров на склад при отказе —
+										<span class="colored-green">бесплатно</span>
+									</p>
+								</div>
+							</div>
 						</div>
 					</section>
 					<section id="payment" class="payment">
-						<div class="info-wrapper"></div>
+						<div class="info-wrapper">
+							<div class="info-wrapper__head">
+								<h2 class="h2">Способ оплаты</h2>
+								<a class="info-wrapper__link" href="#">Изменить</a>
+							</div>
+							<div class="payment__method">
+								<div class="card">
+									<img src="assets/icons/mir.svg" alt="mir cart" />
+									<p>1234 56•• •••• 1234</p>
+								</div>
+								<span class="payment__period">01/30</span>
+								<div class="payment__info p13">
+									Спишем оплату с карты при получении
+								</div>
+							</div>
+						</div>
 					</section>
 					<section id="recipient" class="recipient">
-						<div class="info-wrapper"></div>
+						<div class="info-wrapper">
+							<h2 class="h2">Получатель</h2>
+							<div class="recipient__content">
+								<form class="form">
+									<div class="form__row">
+										<div class="form__container">
+											<label class="form__label" for="name">
+												<input
+													class="form__input"
+													type="text"
+													id="name"
+													name="name"
+													placeholder=""
+												/>
+												<span class="form__title name-title">Имя</span>
+											</label>
+											<span class="form__error"></span>
+										</div>
+										<div class="form__container">
+											<label class="form__label" for="lastName">
+												<input
+													class="form__input"
+													type="text"
+													id="lastName"
+													name="lastName"
+													placeholder=""
+												/>
+												<span class="form__title lastName-title">Фамилия</span>
+											</label>
+											<span class="form__error"></span>
+										</div>
+									</div>
+									<div class="form__row">
+										<div class="form__container">
+											<label class="form__label" for="email">
+												<input
+													class="form__input"
+													type="text"
+													id="email"
+													name="email"
+													placeholder=""
+												/>
+												<span class="form__title">Почта</span>
+											</label>
+											<span class="form__error"></span>
+										</div>
+
+										<div class="form__container">
+											<label class="form__label" for="phone">
+												<input
+													class="form__input"
+													type="text"
+													id="phone"
+													name="phone"
+													placeholder=""
+												/>
+												<span class="form__title phone-title">Телефон</span>
+											</label>
+											<span class="form__error"></span>
+										</div>
+										<div class="form__container">
+											<label class="form__label" for="inn">
+												<input
+													class="form__input"
+													type="text"
+													id="inn"
+													name="inn"
+													placeholder=""
+												/>
+												<span class="form__title inn-title">ИНН</span>
+											</label>
+											<span class="inn">Для таможенного оформления</span>
+											<span class="form__error"></span>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
 					</section>
 				</div>
 
@@ -176,7 +319,7 @@
 							<img class="icon" src="assets/icons/pen.svg" alt="pen" />
 						</div>
 
-						<div class="total__card">
+						<div class="total__card card">
 							<img src="assets/icons/mir.svg" alt="mir cart" />
 							<p class="p13">1234 12•• •••• 1234</p>
 						</div>
