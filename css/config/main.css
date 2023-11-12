@@ -9,7 +9,7 @@ main {
 .basket {
 	background: #f6f6fa;
 	border-radius: 24px;
-	padding: 22px 24px 50px;
+	padding: 22px 24px 49px;
 	display: flex;
 	gap: 32px;
 	width: 100%;
@@ -17,7 +17,7 @@ main {
 
 .basket__left-wrapper {
 	flex: 7;
-	padding-top: 14px;
+	padding-top: 13px;
 	display: flex;
 	flex-direction: column;
 	gap: 16px;
@@ -142,6 +142,10 @@ main {
 
 .total__price svg {
 	min-width: 22px;
+}
+
+.total__delivery br {
+	display: none;
 }
 
 .colored-magenta {
@@ -314,8 +318,11 @@ main {
 
 .basket__title_missing {
 	max-width: 309px;
+	color: #9797af;
 }
-
+.basket__desc_missing {
+	color: #9797af;
+}
 .basket__desc {
 	display: flex;
 	gap: 16px;
@@ -646,6 +653,10 @@ main {
 	color: #9797af;
 }
 
+.recipient {
+	padding-top: 2px;
+}
+
 .recipient__content {
 	width: 100%;
 }
@@ -663,23 +674,30 @@ main {
 }
 
 .form__container {
-	flex-grow: 1;
+	flex: 1 1 auto;
+	position: relative;
 }
 
 .form__title {
 	position: relative;
-	transform: translateY(25px);
+	transform: translateY(21px);
 	color: #a0a0a4;
+	pointer-events: none;
 }
 
 .form__label {
 	display: flex;
 	flex-direction: column-reverse;
-	border-bottom: 1px solid #a0a0a4;
+	height: 43px;
 }
 
 .form__input {
 	height: 27px;
+	border-bottom: 1px solid #a0a0a4;
+	width: 100%;
+	transition: all 0.3s ease;
+	font-size: 16px;
+	line-height: 24px;
 }
 
 .form__input:focus ~ .form__title,
@@ -693,6 +711,22 @@ main {
 	font-size: 12px;
 }
 
-.inn {
+.form__inn {
+	position: absolute;
+	bottom: 3px;
 	font-size: 12px;
+}
+
+@media (max-width: 1025px) {
+	.basket__left-wrapper {
+		flex: 5;
+	}
+
+	.basket__right-wrapper {
+		flex: 2;
+	}
+
+	.rules-confirm {
+		max-width: 230px;
+	}
 }

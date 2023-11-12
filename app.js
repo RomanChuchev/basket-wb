@@ -13,12 +13,27 @@ const burgerWrapper = document.querySelector('.burger-wrapper');
 burgerWrapper.addEventListener('click', function () {
 	burger.classList.toggle('open');
 	menu.classList.toggle('open');
+	burgerWrapper.classList.toggle('open');
+	document.body.classList.toggle('lock');
+});
+
+/*Search Menu*/
+const search = document.querySelector('#menu-search');
+
+search.addEventListener('click', (e) => {
+	if (window.screen.width < 500) {
+		search.classList.toggle('open');
+	}
+
+	console.log('click');
 });
 
 menu.addEventListener('click', function (e) {
 	if (e.target.classList.value !== 'menu__list') {
 		burger.classList.remove('open');
 		menu.classList.remove('open');
+		burgerWrapper.classList.remove('open');
+		document.body.classList.remove('lock');
 	}
 });
 
@@ -120,6 +135,7 @@ function createBasketInfo(el, isMissing = false) {
 	if (el.characters.length) {
 		basketDesc.classList.add('basket__desc');
 		basketDesc.classList.add('p13');
+		if (isMissing) basketDesc.classList.add('basket__desc_missing');
 
 		el.characters.forEach((elem) => {
 			const item = document.createElement('span');
